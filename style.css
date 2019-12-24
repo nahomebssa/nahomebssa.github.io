@@ -1,24 +1,209 @@
-* { margin: 0; padding: 0; }
-html, body { height: 100%; }
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
-	background: black;
-	color: white;
-	font-family: monospace;
-	
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  overflow-x: hidden;
 }
-div {
-	text-align: center;
+
+:root {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9vw;
 }
-h1 {
-	font-family: sans-serif;
-	font-size: 24px;
-	font-weight: normal;
-	letter-spacing: 3px;
+:root a {
+  text-decoration: none;
+  color: inherit;
 }
-h2 {
-	font-size: 16px;
-	font-weight: normal;
+:root .btn {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 3px;
 }
+:root .btn-primary {
+  background: #08F;
+  color: white;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#root #wallpaper {
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  background-image: url("./assets/bg-05.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: -100;
+  margin-top: -20px;
+  margin-left: -20px;
+  padding-bottom: 35px;
+  padding-right: 25px;
+  filter: blur(7px);
+  clip-path: inset(0 0 5px 0);
+}
+#root #wallpaper img {
+  height: 100%;
+  width: 100%;
+}
+#root img#wallpaper {
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  right: 20px;
+  bottom: 20px;
+  filter: blur(7px);
+  z-index: 100;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10vw;
+  color: white;
+}
+
+main {
+  margin-top: -70px;
+}
+main section.jumbotron.jumbotron-fluid {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section.jumbotron.jumbotron-fluid .jumbotron-title,
+main section.jumbotron.jumbotron-fluid .jumbotron-blurb,
+main section.jumbotron.jumbotron-fluid .jumbotron-h1 {
+  color: white;
+}
+main section.jumbotron.jumbotron-fluid .jumbotron-title {
+  font-size: 3.6rem;
+}
+main section.jumbotron.jumbotron-fluid .jumbotron-blurb {
+  font-size: 1.2rem;
+}
+main section.jumbotron.jumbotron-fluid .jumbotron-h1 {
+  font-size: 1.8rem;
+}
+main section.jumbotron.jumbotron-fluid .content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+main section.jumbotron.jumbotron-fluid .content .left, main section.jumbotron.jumbotron-fluid .content .right {
+  width: 40vw;
+}
+main section.jumbotron.jumbotron-fluid .content .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+main section.jumbotron.jumbotron-fluid .content .separator {
+  height: 100%;
+  width: 1px;
+  background: white;
+  margin: 10px;
+}
+main section.jumbotron.jumbotron-fluid .content .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main section.jumbotron.jumbotron-fluid .content .right h3 {
+  margin: 10px 0;
+  font-weight: normal;
+}
+main section.jumbotron.jumbotron-fluid .content .right ul {
+  list-style: none;
+}
+main section.jumbotron.jumbotron-fluid .content .right ul li a {
+  color: inherit;
+}
+
+main section {
+  height: 100vh;
+}
+main section#contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .jumbotron.jumbotron-fluid .right ul li a .card {
+  border-radius: 3px;
+  border: 1px solid #EEEEEE;
+  background-color: white;
+  color: black;
+  width: 300px;
+}
+main .jumbotron.jumbotron-fluid .right ul li a .card img {
+  width: 300px;
+}
+main .jumbotron.jumbotron-fluid .right ul li a .card h1 {
+  margin: 10px 0 5px 10px;
+  font-size: 18px;
+}
+main .jumbotron.jumbotron-fluid .right ul li a .card p {
+  margin: 5px 0 10px 10px;
+  font-size: 14px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #EEE;
+  color: #212121;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal > * {
+  margin: 10px;
+}
+.modal input {
+  border: none;
+  background-color: #F5F5F5;
+  box-shadow: 0 2px 10px 0 #00000020;
+  padding: 10px;
+}
+
+.--anim-disapear {
+  animation: disapear 300ms ease-in-out forwards;
+}
+
+@keyframes disapear {
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
