@@ -25,12 +25,13 @@ const PWORD = "ebssa";
             // console.log($txtUsername.value, $txtPassword.value)
             if ($txtUsername.value == `${PWORD}` && $txtPassword.value == `${UNAME}`)
             {
-                $modalLogin.classList.add("--anim-disapear")
+                $modalLogin.classList.add("--anim-disappear")
                 document.body.style = bodyOriginalStyle
             }
         })
 
         document.body.appendChild($modalLogin)
+        $txtUsername.focus()
 
     })
 
