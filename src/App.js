@@ -71,7 +71,7 @@ const MyHero = () => {
                 <Container>
                     <Jumbotron>
                         <Row>
-                            <Col>
+                            <Col sm>
                                 <h1>Hi I'm Nahom!</h1>
                                 <p>
                                     I am a computer science student at George
@@ -81,7 +81,7 @@ const MyHero = () => {
                                     skills
                                 </p>
                             </Col>
-                            <Col>
+                            <Col sm>
                                 <div
                                     style={{
                                         display: "flex",
@@ -174,7 +174,7 @@ const WorkSection = () => {
                             },
                             i
                         ) => (
-                            <Col>
+                            <Col sm>
                                 <RepoCard key={i} style={{ width: "100%" }}>
                                     <RepoCard.Img href={link}>
                                         <Card.Img src="#" alt="" />
