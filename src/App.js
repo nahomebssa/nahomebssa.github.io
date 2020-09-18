@@ -152,8 +152,8 @@ const WorkSection = () => {
         },
         {
             title: "Github Issues in Pictures",
-            link: "https://nahomebssa.github.io/mentor-app",
-            ghLink: "https://github.com/nahomebssa/mentor-app",
+            link: "https://github.com/nahomebssa/gh-image-crawler",
+            ghLink: "https://github.com/nahomebssa/gh-image-crawler",
             description: `A picture is a thousand words, or actually a thousand lines of code. This neat little script fetches all the images from issues in a repo and bundles them in an html page to envision the project's future.`,
         },
     ];
@@ -193,8 +193,8 @@ const WorkSection = () => {
                                             padding: "20px",
                                         }}
                                     >
-                                        <Button variant="primary" href={ghLink}>
-                                            <FaGithub />
+                                        <Button variant="link" href={ghLink}>
+                                            <FaGithub size={24} />
                                         </Button>
                                     </div>
                                 </RepoCard>
@@ -211,7 +211,7 @@ const ContactSection = () => {
         {
             icon: BsEnvelope,
             href: "mailto:enahom13@gmail.com",
-            title: "Github",
+            title: "Email",
         },
         {
             icon: FaGithub,
@@ -309,8 +309,8 @@ const StyledComponents = {
 const RepoCard = styled(Card)`
     width: 29%;
     height: 100%;
-    max-height: 50vh;
-    margin: 2%;
+    max-height: 70vh;
+    margin: 20% 2%;
     box-shadow: 0 2px 10px 0 #0004;
 `;
 RepoCard.Img = styled.div`
