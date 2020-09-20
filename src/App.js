@@ -131,7 +131,7 @@ const AboutSection = () => {
             <p>
                 I am a computer science student at George Mason University. I am
                 passionate about artificial intelligence and enjoy creating
-                personal projects using my programming skills
+                personal projects using my programming skills.
             </p>
         </Section>
     );
@@ -148,7 +148,7 @@ const WorkSection = () => {
             title: "Unsplash Daily Wallpaper",
             // link: 'https://nahomebssa.github.io/unsplash-daily-wallpaper',
             ghLink: "https://github.com/nahomebssa/unsplash-daily-wallpaper",
-            description: `Getting tired of seeing the same thing on your desktop every day? Now you can renew your desktop with some view goals from Unsplash's wealth of wallpapers`,
+            description: `Getting tired of seeing the same thing on your desktop every day? Now you can renew your desktop with some view goals from Unsplash's wealth of wallpapers!`,
         },
         {
             title: "Github Issues in Pictures",
